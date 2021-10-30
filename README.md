@@ -1,0 +1,2 @@
+# XEye-MacChanger-v2.2
+Change Mac addresses easily with XEye Mac Changer tool, You can either use arguments or just run the tool to enter the interactive mode. If you prefere arguments, just enter use "-i" or "--iface" to specify the required interface, and "-m" or "--mac" to specify the desired mac address. You can simply run the tool without any arguments to enter the interacrive mode. Please note that the tool requires highest privileges, so you need to run the tool with sudo or run it with root user.
