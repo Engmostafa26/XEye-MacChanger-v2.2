@@ -52,8 +52,10 @@ def getmac(interface):
     ifconfgi_re = subprocess.check_output(["ifconfig", interface])
     testing1 = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w", ifconfgi_re)
     testing2 = re.search(r"\w\w-\w\w-\w\w-\w\w-\w\w-\w\w", ifconfgi_re)
-    if testing1 or testing2:
-        return testing.group(0)
+    if testing1:
+        return testing1.group(0)
+    elif testing2:
+        return testing2.group(0)
     else:
         print("No Mac could be read")
 
