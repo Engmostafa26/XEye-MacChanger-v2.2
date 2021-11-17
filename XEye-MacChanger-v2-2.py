@@ -67,7 +67,7 @@ def getmac(interface):
     elif testing2:
         return testing2.group(0)
     else:
-        print("No Mac could be read")
+        print("\n [Warning] --> No Mac could be read ")
 
 def Run():
     XEyee = args()
