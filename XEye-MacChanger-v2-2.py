@@ -29,24 +29,34 @@ def Usermd():
     if not Mac:
         print(" \n [Warning] --> No Mac address specified ..... Exiting")
         exit()
-    Macc = getmac(Interface)
-    if Macc == Mac:
+    Macc1 = getmac(Interface)
+    if Macc1 == Mac:
         print(" \n [Info] --> You just entered the same Mac address for " + Interface + ", please enter a different mac ")
         exit()
     ChMac(Interface, Mac)
-    Macc = getmac(Interface)
-    if Macc == Mac:
+    Macc2 = getmac(Interface)
+    if (Macc2 == Mac) or (Macc1 != Macc2):
         print(" [Done] --> The Mac Address is changed successfully to " + Mac)
         print(" \n [Author] --> Eng.Mostafa Ahmad - Cybersecurity Expert")
     else:
-        print(" [Warning] --> Something Went wrong, The Mac Address didn't changed to "+Mac)
+        print(" [Warning] --> Something Went wrong, The Mac Address didn't change to "+Mac)
         print(" \n\n [Author] --> Eng.Mostafa Ahmad - Cybersecurity Expert")
 
 def ChMac(Interface,Mac):
-    subprocess.call(["ifconfig", Interface, "down"])
-    subprocess.call(["ifconfig", Interface, "hw", "ether", Mac])
-    subprocess.call(["ifconfig", Interface, "up"])
-    print("\n [Info] --> XEye Mac Changer is setting your " + Interface + " Mac address to " + Mac)
+    checkmoni = subprocess.check_output(["iwconfig", Interface])
+    checkmonii = re.search(r"Monitor", checkmoni)
+    if checkmonii.group(0) == 'Monitor':
+        subprocess.call(["sudo", "ifconfig", Interface, "down"])
+        subprocess.call(["sudo", "iwconfig", Interface, "mode", "Auto"])
+        subprocess.call(["sudo", "ifconfig", Interface, "hw", "ether", Mac])
+        subprocess.call(["sudo", "iwconfig", Interface, "mode", "Monitor"])
+        subprocess.call(["sudo", "ifconfig", Interface, "up"])
+        print("\n [Info] --> XEye Mac Changer is setting your " + Interface + " Mac address to " + Mac)
+    else:
+        subprocess.call(["sudo", "ifconfig", Interface, "down"])
+        subprocess.call(["sudo", "ifconfig", Interface, "hw", "ether", Mac])
+        subprocess.call(["sudo", "ifconfig", Interface, "up"])
+        print("\n [Info] --> XEye Mac Changer is setting your " + Interface + " Mac address to " + Mac)
 
 def getmac(interface):
     ifconfgi_re = subprocess.check_output(["ifconfig", interface])
