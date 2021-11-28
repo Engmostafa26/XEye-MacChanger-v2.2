@@ -7,3 +7,7 @@ https://github.com/Engmostafa26/XEye-MacChanger-v3.2
 My YouTube Channel: https://www.youtube.com/channel/UCy_DTQAMcmXhC4CqSLGwbtQ
 
 My Profile on Udemy: https://www.udemy.com/user/mostafa-ahmad-abdelmobdy/
+
+Facebook Page: https://www.facebook.com/XEye-106840768228008
+
+My Available Books Online: https://app.gumroad.com/xeye
