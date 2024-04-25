@@ -3,11 +3,5 @@ Change Mac addresses easily with XEye Mac Changer tool, You can either use optio
 This tool only runs with python2, if you prefere python3, please click on the following link:
 https://github.com/Engmostafa26/XEye-MacChanger-v3.2
 
+Made by [XEye Academy](https://academy.XEyecs.com) for Educational Purposes only.
 
-My YouTube Channel: https://www.youtube.com/channel/UCy_DTQAMcmXhC4CqSLGwbtQ
-
-My Profile on Udemy: https://www.udemy.com/user/mostafa-ahmad-abdelmobdy/
-
-Facebook Page: https://www.facebook.com/XEye-106840768228008
-
-My Available Books Online: https://app.gumroad.com/xeye
