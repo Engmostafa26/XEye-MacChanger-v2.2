@@ -84,5 +84,5 @@ def Run():
         print(" [Warning] --> Something Went wrong, The Mac Address for "+XEyee.interface+" is not changed to "+XEyee.mac)
 
     print("\n *** Thanks for Using XEye Mac Changer ***")
-    print(" \n [Author] --> Eng.Mostafa Ahmad - Cybersecurity Expert")
+    print(" \n XEye Academy --> https://academy.XEyecs.com ")
 Run()
